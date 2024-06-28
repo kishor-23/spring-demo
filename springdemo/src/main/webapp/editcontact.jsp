@@ -61,9 +61,9 @@
     <form action="update-contact" method="post">
         <input type="hidden" id="id" name="id" value="${contact.id}">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="${contact.name}"><br><br>
+        <input type="text" id="name" name="name" required pattern="[ A-Za-z]+" value="${contact.name}"  title="Please enter a valid name (letters only)"><br><br>
         <label for="phoneNumber">Phone Number:</label>
-        <input type="text" id="phoneNumber" name="phoneNumber" value="${contact.phoneNumber}"><br><br>
+        <input type="text" id="phoneNumber" name="phoneNumber"  required pattern="[1-9][0-9]{9}"value="${contact.phoneNumber}" title="Please enter a valid 10-digit phone number without leading zeros"><br><br>
         <input type="submit" value="Update">
     </form>
     <br>

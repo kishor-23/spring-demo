@@ -58,12 +58,14 @@
     </style>
 </head>
 <body>
+
     <h1>Add Contact</h1>
     <form action="save-contact" method="post">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
+       <input type="text"  name="name" required pattern="[ A-Za-z]+" title="Please enter a valid name (letters only)"/>
+        <br><br>
         <label for="phoneNumber">Phone Number:</label>
-        <input type="text" id="phoneNumber" name="phoneNumber"><br><br>
+        <input type="text" id="phoneNumber" name="phoneNumber" required pattern="[1-9][0-9]{9}" title="Please enter a valid 10-digit phone number without leading zeros"/>
         <input type="submit" value="Save">
     </form>
     <div class="center">
